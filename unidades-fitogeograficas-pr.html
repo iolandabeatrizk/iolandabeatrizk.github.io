@@ -22,34 +22,35 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        h1, h2, h3, h4 {
-            color: #0f1f1c; /* verde escuro grafite para títulos */
+        img.main-map {
+            width: 100%;
+            max-width: 1200px;
+            display: block;
+            margin: 0 auto 30px auto;
+            border-radius: 8px;
+        }
+
+        h2, h3, h4 {
+            color: #0f1f1c; /* verde escuro grafite */
             margin-bottom: 15px;
         }
 
         p {
-            color: #555555; /* cinza escuro para descrição */
+            color: #555555; /* cinza escuro */
             line-height: 1.6;
-        }
-
-        img {
-            width: 100%;
-            max-width: 1000px; /* ajuste conforme o tamanho do mapa */
-            display: block;
-            margin: 20px 0;
-            border-radius: 8px;
+            margin-bottom: 20px;
         }
 
         .map-detail {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         .map-detail img {
@@ -66,12 +67,12 @@
 
         a.btn {
             display: inline-block;
-            padding: 8px 15px;
+            padding: 10px 20px;
             background-color: #6fbf9f; /* verde grafite moderno */
             color: #fff;
             border-radius: 5px;
             text-decoration: none;
-            margin-top: 15px;
+            margin-top: 30px;
             transition: 0.3s;
         }
 
@@ -79,32 +80,44 @@
             background-color: #57a085;
         }
 
+        @media (max-width: 900px) {
+            .map-detail img {
+                width: calc(50% - 10px); /* 2 imagens por linha em telas menores */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .map-detail img {
+                width: 100%; /* 1 imagem por linha em celular */
+            }
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Unidades Fitogeográficas do Paraná</h1>
-
-        <p>
-            Este mapa temático representa a distribuição das formações vegetais do Paraná, com foco em leitura espacial e hierarquia cartográfica. Ele é útil para análise de cobertura florestal, planejamento ambiental e pesquisa científica.
-        </p>
 
         <!-- Mapa principal -->
-        <img src="assets/images/maps/unidades-fitogeograficas/MapaFito_2000px.png" alt="Mapa Unidades Fitogeográficas do Paraná">
+        <img src="assets/images/maps/unidades-fitogeograficas/MapaFito_1000px.png" alt="Mapa Unidades Fitogeográficas do Paraná" class="main-map">
 
-        <h2>Detalhes do Mapa</h2>
-        <p>Abaixo estão imagens de detalhes que mostram características importantes das unidades fitogeográficas:</p>
+        <!-- Descrição -->
+        <p>
+            Este mapa temático representa a distribuição das formações vegetais do Paraná, com foco em leitura espacial e hierarquia cartográfica.  
+            É útil para análise de cobertura florestal, planejamento ambiental e pesquisa científica.  
+            Abaixo estão detalhes específicos das unidades fitogeográficas em imagens menores.
+        </p>
 
+        <!-- Detalhes do mapa -->
         <div class="map-detail">
             <img src="assets/images/maps/unidades-fitogeograficas/detalhe1.png" alt="Detalhe 1">
             <img src="assets/images/maps/unidades-fitogeograficas/detalhe2.png" alt="Detalhe 2">
             <img src="assets/images/maps/unidades-fitogeograficas/detalhe3.png" alt="Detalhe 3">
         </div>
 
+        <!-- Botão voltar -->
         <a href="index.html" class="btn">Voltar para o Portfólio</a>
+
     </div>
 </body>
 </html>
 
-</body>
-</html>
