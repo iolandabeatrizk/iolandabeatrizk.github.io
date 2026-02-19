@@ -3,121 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unidades Fitogeográficas do Paraná</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Unidades Fitogeográficas do Paraná</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <style>
+
         body {
-            font-family: 'Lato', sans-serif;
-            background-color: #ffffff; /* fundo branco */
-            color: #555555;            /* cinza escuro para textos */
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff;
+            color: #4a4a4a;
             margin: 0;
-            padding: 0;
         }
 
         .container {
             max-width: 1200px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        /* ---------- TÍTULO ---------- */
+
+        .title-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            color: #0f1f1c;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            max-width: 700px;
             margin: 0 auto;
-            padding: 20px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #666;
+        }
+
+        /* ---------- MAPA PRINCIPAL ---------- */
+
+        .map-wrapper {
+            margin: 60px 0;
         }
 
         img.main-map {
             width: 100%;
-            max-width: 1200px;
-            display: block;
-            margin: 0 auto 30px auto;
-            border-radius: 8px;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
         }
 
-        h2, h3, h4 {
-            color: #0f1f1c; /* verde escuro grafite */
-            margin-bottom: 15px;
+        /* ---------- DESCRIÇÃO ---------- */
+
+        .description {
+            max-width: 800px;
+            margin: 40px auto 60px auto;
+            text-align: center;
+            line-height: 1.8;
+            font-size: 1.05rem;
         }
 
-        p {
-            color: #555555; /* cinza escuro */
-            line-height: 1.6;
-            margin-bottom: 20px;
+        /* ---------- DETALHES ---------- */
+
+        h3 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #0f1f1c;
         }
 
         .map-detail {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
-            margin-top: 10px;
+            justify-content: center;
         }
 
         .map-detail img {
-            width: calc(33% - 10px); /* 3 imagens por linha */
-            height: auto;
-            border-radius: 5px;
+            width: calc(33% - 10px);
+            border-radius: 6px;
+            transition: transform 0.3s ease;
             cursor: pointer;
-            transition: transform 0.3s;
         }
 
         .map-detail img:hover {
             transform: scale(1.05);
         }
 
-        a.btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #6fbf9f; /* verde grafite moderno */
-            color: #fff;
-            border-radius: 5px;
+        /* ---------- BOTÃO ---------- */
+
+        .btn {
+            display: block;
+            width: fit-content;
+            margin: 70px auto 0 auto;
+            padding: 12px 26px;
+            background-color: #6fbf9f;
+            color: white;
             text-decoration: none;
-            margin-top: 30px;
+            border-radius: 6px;
             transition: 0.3s;
         }
 
-        a.btn:hover {
+        .btn:hover {
             background-color: #57a085;
         }
 
+        /* ---------- RESPONSIVO ---------- */
+
         @media (max-width: 900px) {
             .map-detail img {
-                width: calc(50% - 10px); /* 2 imagens por linha em telas menores */
+                width: calc(50% - 10px);
             }
         }
 
         @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
             .map-detail img {
-                width: 100%; /* 1 imagem por linha em celular */
+                width: 100%;
             }
         }
 
     </style>
 </head>
+
 <body>
-    <div class="container">
 
-        <!-- Mapa principal -->
-        <img src="assets/images/maps/unidades-fitogeograficas/MapaFito_3000px.png" alt="Mapa Unidades Fitogeográficas do Paraná" class="main-map">
+<div class="container">
 
-        <!-- Descrição -->
-        <p>
-            Este mapa temático representa a distribuição das formações vegetais do Paraná, com foco em leitura espacial e hierarquia cartográfica.  
-            É útil para análise de cobertura florestal, planejamento ambiental e pesquisa científica.  
-            Abaixo estão detalhes específicos das unidades fitogeográficas em imagens menores.
+    <!-- Título -->
+    <div class="title-section">
+        <h1>Unidades Fitogeográficas do Paraná</h1>
+
+        <p class="subtitle">
+            Mapa temático desenvolvido para representação espacial das formações vegetais
+            do estado do Paraná, com foco em clareza cartográfica, hierarquia visual
+            e suporte à análise ambiental e planejamento territorial.
         </p>
-
-        <!-- Detalhes do mapa -->
-        <div class="map-detail">
-            <img src="assets/images/maps/unidades-fitogeograficas/Details1.png" alt="Details 1">
-            <img src="assets/images/maps/unidades-fitogeograficas/detalhe2.png" alt="Detalhe 2">
-            <img src="assets/images/maps/unidades-fitogeograficas/detalhe3.png" alt="Detalhe 3">
-        </div>
-
-        <!-- Botão voltar -->
-        <a href="index.html" class="btn">Voltar para o Portfólio</a>
-
     </div>
+
+    <!-- Mapa Principal -->
+    <div class="map-wrapper">
+        <img src="assets/images/maps/unidades-fitogeograficas/MapaFito_3000px.png"
+             alt="Mapa Unidades Fitogeográficas do Paraná"
+             class="main-map">
+    </div>
+
+    <!-- Descrição após o mapa -->
+    <div class="description">
+        <p>
+            O mapa apresenta a distribuição das unidades fitogeográficas considerando
+            padrões de vegetação, organização espacial e leitura multiescalar.
+            A composição prioriza contraste visual, equilíbrio cromático e
+            interpretação rápida das informações territoriais.
+        </p>
+    </div>
+
+    <!-- Detalhes -->
+    <h3>Detalhes Cartográficos</h3>
+
+    <div class="map-detail">
+        <img src="assets/images/maps/unidades-fitogeograficas/Details1.png" alt="Detalhe 1">
+        <img src="assets/images/maps/unidades-fitogeograficas/detalhe2.png" alt="Detalhe 2">
+        <img src="assets/images/maps/unidades-fitogeograficas/detalhe3.png" alt="Detalhe 3">
+    </div>
+
+    <!-- Botão -->
+    <a href="index.html" class="btn">Voltar para o Portfólio</a>
+
+</div>
+
 </body>
 </html>
-
