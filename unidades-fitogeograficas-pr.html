@@ -1,107 +1,110 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades Fitogeográficas do Paraná</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
-<title>Unidades Fitogeográficas do Paraná | Iolanda Beatriz</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #e6f2ef; /* fundo suave, tom claro do verde grafite */
-    color: #0f1f1c;       /* textos escuros */
-}
-h1, h2 {
-    color: #6fbf9f;       /* verde grafite moderno */
-}
-a {
-    color: #6fbf9f;
-}
+    <!-- CSS -->
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #ffffff; /* fundo branco */
+            color: #555555;            /* cinza escuro para textos */
+            margin: 0;
+            padding: 0;
+        }
 
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:40px 20px;
-}
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-h1,h2{
-    color:#6fbf9f;
-}
+        h1, h2, h3, h4 {
+            color: #0f1f1c; /* verde escuro grafite para títulos */
+            margin-bottom: 15px;
+        }
 
-.main-map{
-    width:100%;
-    border-radius:12px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.4);
-}
+        p {
+            color: #555555; /* cinza escuro para descrição */
+            line-height: 1.6;
+        }
 
-.tech{
-    background:#162925;
-    padding:20px;
-    border-radius:10px;
-    margin-top:25px;
-}
+        img {
+            width: 100%;
+            max-width: 1000px; /* ajuste conforme o tamanho do mapa */
+            display: block;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
 
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    margin-top:30px;
-}
+        .map-detail {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
 
-.gallery img{
-    width:100%;
-    border-radius:10px;
-    transition:0.3s;
-}
+        .map-detail img {
+            width: calc(33% - 10px); /* 3 imagens por linha */
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
 
-.gallery img:hover{
-    transform:scale(1.05);
-}
+        .map-detail img:hover {
+            transform: scale(1.05);
+        }
 
-a{
-    color:#6fbf9f;
-    text-decoration:none;
-}
-</style>
+        a.btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #6fbf9f; /* verde grafite moderno */
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        a.btn:hover {
+            background-color: #57a085;
+        }
+
+    </style>
 </head>
-
 <body>
+    <div class="container">
+        <h1>Unidades Fitogeográficas do Paraná</h1>
 
-<div class="container">
+        <p>
+            Este mapa temático representa a distribuição das formações vegetais do Paraná, com foco em leitura espacial e hierarquia cartográfica. Ele é útil para análise de cobertura florestal, planejamento ambiental e pesquisa científica.
+        </p>
 
-<a href="index.html">← Voltar ao portfólio</a>
+        <!-- Mapa principal -->
+        <img src="assets/images/maps/unidades-fitogeograficas/MapaFito_2000px.png" alt="Mapa Unidades Fitogeográficas do Paraná">
 
-<h1>Mapa das Unidades Fitogeográficas do Paraná</h1>
+        <h2>Detalhes do Mapa</h2>
+        <p>Abaixo estão imagens de detalhes que mostram características importantes das unidades fitogeográficas:</p>
 
-<p>
-Mapa temático desenvolvido para representação das unidades fitogeográficas do estado do Paraná,
-destacando padrões de vegetação e compartimentação ecológica regional.
-</p>
+        <div class="map-detail">
+            <img src="assets/images/maps/unidades-fitogeograficas/detalhe1.png" alt="Detalhe 1">
+            <img src="assets/images/maps/unidades-fitogeograficas/detalhe2.png" alt="Detalhe 2">
+            <img src="assets/images/maps/unidades-fitogeograficas/detalhe3.png" alt="Detalhe 3">
+        </div>
 
-<img src="assets/images/maps/unidades-fitogeograficas/MapaFito_2000px.png" class="main-map">
-
-<div class="tech">
-<h2>Ferramentas e Metodologia</h2>
-
-<ul>
-<li>ArcGIS Pro – composição cartográfica</li>
-<li>Modelagem espacial e simbologia temática</li>
-<li>Integração de bases ambientais oficiais</li>
-<li>Generalização cartográfica e hierarquia visual</li>
-</ul>
-</div>
-
-<h2>Detalhes Cartográficos</h2>
-
-<div class="gallery">
-<img src="assets/images/maps/unidades-fitogeograficas/detalhe-1.jpg">
-<img src="assets/images/maps/unidades-fitogeograficas/detalhe-2.jpg">
-<img src="assets/images/maps/unidades-fitogeograficas/detalhe-3.jpg">
-</div>
-
-</div>
+        <a href="index.html" class="btn">Voltar para o Portfólio</a>
+    </div>
+</body>
+</html>
 
 </body>
 </html>
