@@ -6,7 +6,8 @@
 
 <title>Iolanda Beatriz | GIS Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<!-- FONTS -->
+ <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -30,6 +31,7 @@ body{
 }
 
 h1,h2,h3{
+    font-family:'Playfair Display',serif;
     margin-bottom:10px;
 }
 
@@ -47,14 +49,9 @@ header h1{
     margin:0;
 }
 
-header p{
-    opacity:0.9;
-    margin-top:10px;
-}
-
 .social-links a{
     color:white;
-    margin:0 10px;
+    margin:0 12px;
     font-size:1.4em;
     transition:0.3s;
 }
@@ -107,16 +104,26 @@ nav a{
 
 .about-content{
     display:flex;
-    gap:40px;
+    gap:50px;
     align-items:center;
     justify-content:center;
-    flex-wrap:wrap;
 }
 
 .profile-photo{
-    width:220px;
-    height:auto;
+    width:240px;
     border-radius:12px;
+}
+
+.about-text{
+    max-width:600px;
+    line-height:1.7;
+}
+
+@media (max-width:800px){
+    .about-content{
+        flex-direction:column;
+        text-align:center;
+    }
 }
 
 /* ---------- PROJECTS ---------- */
@@ -181,14 +188,20 @@ nav a{
     box-shadow:0 4px 12px rgba(0,0,0,0.06);
 }
 
-.skill-column ul{
-    padding-left:18px;
-}
-
 /* ---------- CONTACT ---------- */
 
 .contact{
     text-align:center;
+}
+
+.contact a{
+    color:#1f3d3a;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.contact i{
+    margin-right:8px;
 }
 
 /* ---------- FOOTER ---------- */
@@ -212,8 +225,11 @@ footer{
 <p>Forest Engineer | GIS Analyst | Spatial Data & Environmental Analysis</p>
 
 <div class="social-links">
-<a href="#"><i class="fab fa-linkedin"></i></a>
-<a href="#"><i class="fab fa-github"></i></a>
+<a href="https://www.linkedin.com/in/iolanda-beatriz-k-a9843110b/" target="_blank">
+<i class="fab fa-linkedin"></i></a>
+
+<a href="https://github.com/iolandabeatrizk" target="_blank">
+<i class="fab fa-github"></i></a>
 </div>
 </div>
 </header>
@@ -223,6 +239,7 @@ footer{
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#projects">GIS Projects</a></li>
+<li><a href="resume.html">Resume</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
@@ -240,7 +257,7 @@ footer{
 class="profile-photo"
 alt="Profile Photo">
 
-<div>
+<div class="about-text">
 <p>
 Forest Engineer specialized in GIS and spatial analysis applied to
 environmental monitoring, land-use planning, and forest management.
@@ -253,7 +270,7 @@ land management.
 </p>
 
 <p>
-Experienced with ArcGIS Pro, thematic mapping, spatial analysis,
+Experienced with ArcGIS Pro, ArcGIS Online, QGIS, spatial analysis,
 and environmental datasets, currently expanding skills in Python
 and data science.
 </p>
@@ -264,51 +281,44 @@ and data science.
 </section>
 
 <!-- PROJECTS -->
-
 <section id="projects" class="section">
-  <div class="container">
+<div class="container">
 
-    <h2>GIS Projects</h2>
+<h2>GIS Projects</h2>
 
-    <div class="projects-grid">
+<div class="projects-grid">
 
-      <div class="project-card">
-        <img src="assets/images/maps/unidades-fitogeograficas/MapaFito_1000px.png" alt="Unidades Fitogeográficas do Paraná">
-        <div class="project-card-content">
-          <h3>Unidades Fitogeográficas do Paraná</h3>
-          <p>
-            Mapa temático representando a distribuição das formações vegetais do Paraná,
-            com foco em leitura espacial e hierarquia cartográfica.
-          </p>
-          <a href="unidades-fitogeograficas-pr.html" class="btn">View Project</a>
-        </div>
-      </div>
+<div class="project-card">
+<img src="assets/images/maps/unidades-fitogeograficas/MapaFito_1000px.png">
+<div class="project-card-content">
+<h3>Unidades Fitogeográficas do Paraná</h3>
+<p>Distribuição das formações vegetais do Paraná com foco em hierarquia cartográfica.</p>
+<a href="unidades-fitogeograficas-pr.html" class="btn">View Project</a>
+</div>
+</div>
 
-      <div class="project-card">
-        <img src="assets/images/maps/serra-do-mar/Mapa_Altitude Serra_do_Mar_1000px.png" alt="Complexo de Montanhas da Serra do Mar Paranaense">
-        <div class="project-card-content">
-          <h3>Complexo de Montanhas da Serra do Mar Paranaense</h3>
-          <p>Representação cartográfica do complexo montanhoso da Serra do Mar
-            no estado do Paraná, destacando padrões topográficos.</p>
-          <a href="serra-do-mar.html" class="btn">View Project</a>
-        </div>
-      </div>
+<div class="project-card">
+<img src="assets/images/maps/serra-do-mar/Mapa_Altitude Serra_do_Mar_1000px.png">
+<div class="project-card-content">
+<h3>Complexo de Montanhas da Serra do Mar Paranaense</h3>
+<p>Representação cartográfica destacando padrões topográficos regionais.</p>
+<a href="serra-do-mar.html" class="btn">View Project</a>
+</div>
+</div>
 
-      <div class="project-card">
-        <img src="assets/images/maps/active-volcanoes-south-america/active-volcanoes-south-america.gitkeep_1500px.png" alt="Most Active Volcanoes in South America">
-        <div class="project-card-content">
-          <h3>Most Active Volcanoes in South America</h3>
-          <p>Thematic cartographic representation highlighting the spatial
-            distribution of the most active volcanoes across South America.</p>
-          <a href="active-volcanoes-south-america.html" class="btn">View Project</a>
-        </div>
-      </div>
+<div class="project-card">
+<img src="assets/images/maps/active-volcanoes-south-america/active-volcanoes-south-america.gitkeep_1500px.png">
+<div class="project-card-content">
+<h3>Most Active Volcanoes in South America</h3>
+<p>Thematic cartographic representation of active volcanic systems.</p>
+<a href="active-volcanoes-south-america.html" class="btn">View Project</a>
+</div>
+</div>
 
-    </div>
-
-  </div>
+</div>
+</div>
 </section>
-    
+
 <!-- SKILLS -->
 <section id="skills" class="section">
 <div class="container">
@@ -358,8 +368,24 @@ and data science.
 <h2>Contact</h2>
 
 <p>
-LinkedIn: https://www.linkedin.com/in/iolanda-beatriz-k-a9843110b/<br>
-GitHub: https://github.com/iolandabeatrizk
+<a href="mailto:iolandabeatrizk@outlook.com">
+<i class="fas fa-envelope"></i>Email
+</a>
+<br><br>
+
+<a href="https://wa.me/5541998971030" target="_blank">
+<i class="fab fa-whatsapp"></i>WhatsApp
+</a>
+<br><br>
+
+<a href="https://www.linkedin.com/in/iolanda-beatriz-k-a9843110b/" target="_blank">
+<i class="fab fa-linkedin"></i>LinkedIn
+</a>
+<br><br>
+
+<a href="https://github.com/iolandabeatrizk" target="_blank">
+<i class="fab fa-github"></i>GitHub
+</a>
 </p>
 
 </div>
@@ -368,6 +394,9 @@ GitHub: https://github.com/iolandabeatrizk
 <footer>
 <p>© 2026 Iolanda Beatriz</p>
 </footer>
+
+</body>
+</html>
 
 </body>
 </html>
