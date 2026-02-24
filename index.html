@@ -12,6 +12,8 @@
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+
+ 
 <style>
 
 /* ---------- GLOBAL ---------- */
@@ -22,7 +24,7 @@ body{
     color:#2b2b2b;
     scroll-behavior:smooth;
 }
-
+ 
 .container{
     width:90%;
     max-width:1100px;
@@ -215,10 +217,36 @@ footer{
     padding:30px;
 }
 
+/* ---------- LANGUAGE SWITCH ---------- */
+
+.language-switch{
+    position:absolute;
+    top:20px;
+    right:40px;
+    font-size:14px;
+    font-weight:400;
+    z-index:2000;
+}
+
+.language-switch a{
+    text-decoration:none;
+    color:#ffffff;
+    margin:0 5px;
+}
+
+.language-switch a:hover{
+    opacity:0.7;
+}
+ 
 </style>
 </head>
 
 <body>
+
+<div class="language-switch">
+  <a href="/">EN</a> |
+  <a href="/pt/">PT</a>
+</div>
 
 <!-- HEADER -->
 <header>
@@ -396,9 +424,6 @@ and data science.
 <footer>
 <p>© 2026 Iolanda Beatriz</p>
 </footer>
-
-</body>
-</html>
 
 </body>
 </html>
