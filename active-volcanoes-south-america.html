@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Most Active Volcanoes in South America</title>
+    <title>Os vulcões mais ativos da América do Sul</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <style>
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Inter Tight', sans-serif;
             background-color: #ffffff;
             color: #4a4a4a;
             margin: 0;
@@ -27,47 +27,78 @@
 
         /* ---------- TÍTULO ---------- */
 
-        .title-section {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
+       .title-section {
+    text-align: center;
+    margin-bottom: 70px;
+}
         h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.6rem;
-            color: #0f1f1c;
-            margin-bottom: 15px;
-        }
-
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;          /* mais forte */
+    letter-spacing: -0.5px;    /* ajuste profissional */
+    color: #0f1f1c;
+    margin-bottom: 18px;
+} 
+        
         .subtitle {
-            max-width: 700px;
-            margin: 0 auto;
-            font-size: 1.05rem;
-            line-height: 1.7;
-            color: #666;
-        }
+           max-width: 700px;
+           margin: 0 auto;
+           font-size: 1.05rem;
+           line-height: 1.75;
+           color: #666;
+           font-family: 'Inter Tight', sans-serif;
+             }
 
         /* ---------- MAPA PRINCIPAL ---------- */
 
         .map-wrapper {
-            margin: 60px 0;
-        }
+    margin: 70px 0;
+}
 
-        img.main-map {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-        }
-
+img.main-map {
+    width: 110%;
+    max-width: none;
+    margin-left: -5%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
         /* ---------- DESCRIÇÃO ---------- */
 
-        .description {
-            max-width: 800px;
-            margin: 40px auto 60px auto;
-            text-align: center;
-            line-height: 1.8;
-            font-size: 1.05rem;
-        }
+/* ---------- DESCRIÇÃO (editorial equilibrado) ---------- */
+
+.description {
+    max-width: 760px;
+    margin: 60px auto 70px auto;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: #4a4a4a;
+    font-family: 'Inter Tight', sans-serif;
+}
+
+.description p {
+    text-align: justify;
+    hyphens: auto;
+    margin-bottom: 18px;
+}
+
+/* título técnico */
+.description h3 {
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* linha editorial discreta */
+.description h3::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #b5bdb8;
+    margin-bottom: 10px;
+}
 
         /* ---------- DETALHES ---------- */
 
@@ -140,17 +171,15 @@
 
     <!-- Título -->
     <div class="title-section">
-        <h1>Most Active Volcanoes in South America</h1>
+        <h1>Os vulcões mais ativos da América do Sul</h1>
 
         <p class="subtitle">
-            Thematic cartographic representation highlighting the spatial
-            distribution of the most active volcanoes across South America,
-            emphasizing geological patterns and regional volcanic dynamics.
+            A Cordilheira dos Andes, que se estende ao longo da costa oeste da América do Sul, concentra uma grande quantidade de vulcões, incluindo alguns dos mais ativos do planeta. Essa intensa atividade vulcânica molda paisagens e destaca a região como uma das áreas geologicamente mais dinâmicas do mundo.
         </p>
     </div>
 
     <!-- Mapa Principal -->
-    <div class="map-wrapper">
+   <div class="map-wrapper">
         <img src="assets/images/maps/active-volcanoes-south-america/Most active volcanoes in South America_3000px.png"
              alt="Most Active Volcanoes in South America"
              class="main-map">
@@ -158,17 +187,29 @@
 
     <!-- Descrição após o mapa -->
     <div class="description">
-        <p>
-            The map integrates geological datasets and visual hierarchy
-            principles to support spatial interpretation of volcanic
-            activity. Symbolization and layout were designed to balance
-            scientific accuracy and visual clarity for analytical and
-            educational purposes.
-        </p>
-    </div>
+       <p>
+        O mapa destaca alguns dos vulcões mais ativos da América do Sul: Villarrica, Llaima, Lascar, Ubinas e Sabancaya, selecionados com base em registros históricos de erupções, atividade recente e potencial de risco vulcânico. As informações foram compiladas a partir de bases de monitoramento científico, incluindo o Global Volcanism Program (Smithsonian Institution), o SERNAGEOMIN (Chile) e o Instituto Geofísico del Perú (IGP).
+    </p>
+
+    <p>
+       A formação desse vulcanismo está relacionada ao encontro entre placas tectônicas, onde a Placa de Nazca mergulha sob a Placa Sul-Americana. Esse movimento favoreceu a ascensão do magma e a formação dos vulcões ao longo da Cordilheira dos Andes, criando uma paisagem marcada por grandes altitudes, relevo acidentado e atividade geológica constante.
+    </p>
+
+  
+    <h3>Especificações técnicas</h3>
+
+    <p>
+        O mapa foi desenvolvido a partir de Modelos Digitais de Elevação (MDE) disponíveis em bases públicas, utilizados para representação do relevo andino. A visualização foi construída no ambiente Local Scene do ArcGIS Pro, permitindo destacar individualmente cada vulcão em uma perspectiva tridimensional.
+    </p>
+
+    <p>
+        Foram geradas composições de relevo a partir do Modelo Digital de Elevação (MDE/DEM), incluindo produtos derivados como hillshade e slope. Também foram aplicadas técnicas de sobreposição entre camadas, utilizando modos de mesclagem (blend modes) como Multiply, Overlay e Soft Light, além de ajustes de transparência e iluminação. 
+    </p>
+
+</div>
 
     <!-- Detalhes -->
-    <h3>Details</h3>
+    <h3>Detalhes</h3>
 
     <div class="map-detail">
         <img src="assets/images/maps/active-volcanoes-south-america/Details1.png" alt="Detalhe 1">
@@ -177,9 +218,12 @@
     </div>
 
     <!-- Botão -->
-    <a href="index.html" class="btn">Back to Portfolio</a>
+    <a href="index.html" class="btn">Voltar para o Portfólio</a>
 
 </div>
+
+</body>
+</html>
 
 </body>
 </html>
