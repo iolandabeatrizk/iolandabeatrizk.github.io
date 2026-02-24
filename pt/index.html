@@ -1,1 +1,404 @@
-Hello PT
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Iolanda Beatriz | GIS Portfolio</title>
+
+<!-- FONTS -->
+ <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,600;1,100&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<style>
+
+/* ---------- GLOBAL ---------- */
+
+body{
+    font-family:'Inter', sans-serif;
+    font-weight:300;
+    color:#2b2b2b;
+    scroll-behavior:smooth;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+h1, h2, h3{
+    font-family:'Inter', sans-serif;
+    font-weight:400;
+    letter-spacing:0.5px;
+}
+
+/* ---------- HEADER ---------- */
+
+header{
+    background:#1f3d3a;
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+header h1{
+    font-size:2.6em;
+    margin:0;
+}
+
+.social-links a{
+    color:white;
+    margin:0 12px;
+    font-size:1.4em;
+    transition:0.3s;
+}
+
+.social-links a:hover{
+    color:#7fd1cc;
+}
+
+/* ---------- NAV ---------- */
+
+nav{
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 6px rgba(0,0,0,0.08);
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    margin:0;
+    padding:15px;
+}
+
+nav li{
+    margin:0 20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#1f3d3a;
+    font-weight:700;
+}
+
+/* ---------- SECTIONS ---------- */
+
+.section{
+    padding:70px 0;
+}
+
+.section h2{
+    text-align:center;
+    color:#1f3d3a;
+    margin-bottom:40px;
+}
+
+/* ---------- ABOUT ---------- */
+
+.about-content{
+    display:flex;
+    gap:50px;
+    align-items:center;
+    justify-content:center;
+}
+
+.profile-photo{
+    width:240px;
+    border-radius:12px;
+}
+
+..about-text,
+.description{
+    font-style:italic;
+    font-weight:100;
+    color:#4a4a4a;
+}
+
+@media (max-width:800px){
+    .about-content{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+/* ---------- PROJECTS ---------- */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-6px);
+}
+
+.project-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.project-card-content{
+    padding:20px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 18px;
+    background:#2a6f6b;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#1f3d3a;
+}
+
+/* ---------- SKILLS ---------- */
+
+.skills-table{
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    justify-content:center;
+}
+
+.skill-column{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    width:260px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact{
+    text-align:center;
+}
+
+.contact a{
+    color:#1f3d3a;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.contact i{
+    margin-right:8px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+    background:#1f3d3a;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+<div class="container">
+<h1>Iolanda Beatriz</h1>
+<p>Engenheira Florestal | Analista GIS | Spatial Data & Environmental Analysis</p>
+
+<div class="social-links">
+<a href="https://www.linkedin.com/in/iolanda-beatriz-k-a9843110b/" target="_blank">
+<i class="fab fa-linkedin"></i></a>
+
+<a href="https://github.com/iolandabeatrizk" target="_blank">
+<i class="fab fa-github"></i></a>
+</div>
+</div>
+</header>
+
+<!-- NAV -->
+<nav>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">GIS Projects</a></li>
+<li><a href="resume.html">Resume</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+<div class="container">
+
+<h2>About Me</h2>
+
+<div class="about-content">
+
+<img src="assets/images/maps/about-me/Me.jpg"
+class="profile-photo"
+alt="Profile Photo">
+
+<div class="about-text">
+<p>
+Forest Engineer specialized in GIS and spatial analysis applied to
+environmental monitoring, land-use planning, and forest management.
+</p>
+
+<p>
+My work focuses on transforming spatial data into clear environmental
+insights that support territorial decision-making and sustainable
+land management.
+</p>
+
+<p>
+Experienced with ArcGIS Pro, ArcGIS Online, QGIS, spatial analysis,
+and environmental datasets, currently expanding skills in Python
+and data science.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+<div class="container">
+
+<h2>GIS Projects</h2>
+
+<div class="projects-grid">
+
+<div class="project-card">
+<img src="assets/images/maps/unidades-fitogeograficas/MapaFito_1000px.png">
+<div class="project-card-content">
+<h3>Phytogeographic Units of Paraná</h3>
+<p>Distribution of Vegetation Formations in Relation to Topography.</p>
+<a href="unidades-fitogeograficas-pr.html" class="btn">View Project</a>
+</div>
+</div>
+
+<div class="project-card">
+<img src="assets/images/maps/serra-do-mar/Mapa_Altitude Serra_do_Mar_1000px.png">
+<div class="project-card-content">
+<h3>Mountain Complex of the Paraná Serra do Mar</h3>
+<p>Cartographic representation highlighting regional topographic patterns and elevation levels.</p>
+<a href="serra-do-mar.html" class="btn">View Project</a>
+</div>
+</div>
+
+<div class="project-card">
+<img src="assets/images/maps/active-volcanoes-south-america/active-volcanoes-south-america.gitkeep_1500px.png">
+<div class="project-card-content">
+<h3>Most Active Volcanoes in South America</h3>
+<p>Thematic cartographic representation of active volcanic systems.</p>
+<a href="active-volcanoes-south-america.html" class="btn">View Project</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+<div class="container">
+
+<h2>Technical Skills</h2>
+
+<div class="skills-table">
+
+<div class="skill-column">
+<h3>GIS Tools</h3>
+<ul>
+<li>ArcGIS Pro</li>
+<li>ArcGIS Online</li>
+<li>QGIS</li>
+<li>Spatial Analysis</li>
+</ul>
+</div>
+
+<div class="skill-column">
+<h3>Data & Programming</h3>
+<ul>
+<li>Python (learning)</li>
+<li>SQL (learning)</li>
+<li>Data Analysis</li>
+<li>Geospatial Processing</li>
+</ul>
+</div>
+
+<div class="skill-column">
+<h3>Environmental Applications</h3>
+<ul>
+<li>Land-use Analysis</li>
+<li>Forest Monitoring</li>
+<li>Environmental Mapping</li>
+<li>Cartographic Design</li>
+</ul>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+<div class="container contact">
+
+<h2>Contact</h2>
+
+<p>
+<a href="mailto:iolandabeatrizk@outlook.com">
+<i class="fas fa-envelope"></i>Email
+</a>
+<br><br>
+
+<a href="https://wa.me/5541998971030" target="_blank">
+<i class="fab fa-whatsapp"></i>WhatsApp
+</a>
+<br><br>
+
+<a href="https://www.linkedin.com/in/iolanda-beatriz-k-a9843110b/" target="_blank">
+<i class="fab fa-linkedin"></i>LinkedIn
+</a>
+<br><br>
+
+<a href="https://github.com/iolandabeatrizk" target="_blank">
+<i class="fab fa-github"></i>GitHub
+</a>
+</p>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 Iolanda Beatriz</p>
+</footer>
+
+</body>
+</html>
+
+</body>
+</html>
