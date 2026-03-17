@@ -1,1 +1,237 @@
-Hello
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Complexo de Montanhas da Serra do Mar Paranaense</title>
+
+    <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <style>
+
+        body {
+            font-family: 'Inter Tight', sans-serif;
+            background-color: #ffffff;
+            color: #4a4a4a;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        /* ---------- TÍTULO ---------- */
+
+       .title-section {
+    text-align: center;
+    margin-bottom: 70px;
+}
+        h1 {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;          /* mais forte */
+    letter-spacing: -0.5px;    /* ajuste profissional */
+    color: #0f1f1c;
+    margin-bottom: 18px;
+} 
+        
+        .subtitle {
+           max-width: 700px;
+           margin: 0 auto;
+           font-size: 1.05rem;
+           line-height: 1.75;
+           color: #666;
+           font-family: 'Inter Tight', sans-serif;
+             }
+
+        /* ---------- MAPA PRINCIPAL ---------- */
+
+        .map-wrapper {
+    margin: 70px 0;
+}
+
+img.main-map {
+    width: 110%;
+    max-width: none;
+    margin-left: -5%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+        /* ---------- DESCRIÇÃO ---------- */
+
+/* ---------- DESCRIÇÃO (editorial equilibrado) ---------- */
+
+.description {
+    max-width: 760px;
+    margin: 60px auto 70px auto;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: #4a4a4a;
+    font-family: 'Inter Tight', sans-serif;
+}
+
+.description p {
+    text-align: justify;
+    hyphens: auto;
+    margin-bottom: 18px;
+}
+
+/* título técnico */
+.description h3 {
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* linha editorial discreta */
+.description h3::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #b5bdb8;
+    margin-bottom: 10px;
+}
+
+        /* ---------- DETALHES ---------- */
+
+        h3 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #0f1f1c;
+        }
+
+        .map-detail {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .map-detail img {
+            width: calc(33% - 10px);
+            border-radius: 6px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .map-detail img:hover {
+            transform: scale(1.05);
+        }
+
+        /* ---------- BOTÃO ---------- */
+
+        .btn {
+            display: block;
+            width: fit-content;
+            margin: 70px auto 0 auto;
+            padding: 12px 26px;
+            background-color: #6fbf9f;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #57a085;
+        }
+
+        /* ---------- RESPONSIVO ---------- */
+
+        @media (max-width: 900px) {
+            .map-detail img {
+                width: calc(50% - 10px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .map-detail img {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Título -->
+    <div class="title-section">
+        <h1>Complexo de Montanhas da Serra do Mar Paranaense</h1>
+
+        <p class="subtitle">
+            Na região litorânea do Paraná afloram as rochas mais antigas do estado, com mais de 3 bilhões de anos, 
+formadas entre o Arqueano e o Paleozóico. A Serra do Mar teve origem com a separação da América do Sul e da África, 
+há cerca de 150 milhões de anos, durante a abertura do Oceano Atlântico.
+        </p>
+    </div>
+
+    <!-- Mapa Principal -->
+   <div class="map-wrapper">
+        <img src="assets/images/maps/serra-do-mar/Complexo_Montanhas_Serrra.png"
+             alt="Complexo de Montanhas da Serra do Mar Paranaense"
+             class="main-map">
+    </div>
+
+    <!-- Descrição após o mapa -->
+    <div class="description">
+       <p>
+        O mapa mostra as maiores altitudes do Paraná, concentradas na Serra do Mar, que separa a planície litorânea 
+do Primeiro Planalto Paranaense. A Serra do Ibitiraquire abriga o ponto mais alto da Região Sul do Brasil, o Pico Paraná, 
+com 1.877 metros de altitude, destacando-se como uma das paisagens montanhosas mais expressivas do país.
+    </p>
+
+    <p>
+       A representação cartográfica evidencia a imponência do relevo por meio de uma perspectiva oblíqua, valorizando a relação 
+entre altitude, declividade e forma do terreno. É interessante observar o contraste altitudinal entre a região litorânea, ao nível do mar,
+e a ascensão do terreno em direção ao Primeiro Planalto Paranaense, onde se encontra Curitiba. 
+Essa transição também traz a curiosidade quanto a dinâmica geológica responsável pela formação da Serra do Mar, e mostra como o relevo condiciona 
+paisagens, clima e padrões de ocupação ao longo do território paranaense.
+    </p>
+
+  
+    <h3>Especificações técnicas</h3>
+
+    <p>
+        Com base no tutorial de <a href="https://www.youtube.com/watch?v=J0PWED9Orr4&t=1s" target="_blank" class="text-link"> John Nelson</a>, cartógrafo da Esri, descobri a ToolBox Terrain Mapping (Plan Oblique), que,
+ a partir da definição de ângulos, permite gerar uma perspectiva tridimensional do relevo através do exagero vertical.
+    </p>
+
+    <p>
+        O arquivo resultante foi incorporado a uma cena 3D no ArcGIS Pro, reforçando a sensação de observação da paisagem. 
+Foram aplicadas ainda técnicas de sobreposição entre camadas, utilizando modos de mesclagem (blend modes) como Multiply, Overlay e Soft Light, 
+combinados a ajustes de transparência e luminosidade para aprimorar a leitura visual do terreno.
+    </p>
+
+</div>
+
+    <!-- Detalhes -->
+    <h3>Detalhes</h3>
+
+    <div class="map-detail">
+         <img src="assets/images/maps/serra-do-mar/Details2.png" alt="Detalhe 1">
+        <img src="assets/images/maps/serra-do-mar/Details1.png" alt="Detalhe 2">
+        <img src="assets/images/maps/serra-do-mar/Details3.png" alt="Detalhe 3">
+    </div>
+
+    <!-- Botão -->
+    <a href="index.html" class="btn">Voltar para o Portfólio</a>
+
+</div>
+
+</body>
+</html>
