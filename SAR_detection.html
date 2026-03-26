@@ -1,1 +1,215 @@
-olá
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detecção de Alterações usando SAR - Sentinel 1</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+
+    <style>
+        body {
+            font-family: 'Inter Tight', sans-serif;
+            background-color: #ffffff;
+            color: #4a4a4a;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        /* ---------- TÍTULO ---------- */
+        .title-section {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #0f1f1c;
+            margin-bottom: 18px;
+        }
+
+        .subtitle {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: #666;
+        }
+
+        /* ---------- WRAPPER DO SLIDER (Substituindo o mapa fixo) ---------- */
+        .map-wrapper {
+            margin: 70px 0;
+            width: 110%; /* Mantendo sua proporção original */
+            margin-left: -5%;
+            border-radius: 10px;
+            overflow: hidden; /* Garante que a imagem não saia da borda arredondada */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        /* Ajustes finos no Juxtapose para combinar com seu estilo */
+        .juxtapose {
+            font-family: 'Inter Tight', sans-serif !important;
+        }
+
+        .jx-label {
+            font-weight: 500 !important;
+            background: rgba(15, 31, 28, 0.7) !important; /* Cor combinando com seu título */
+        }
+
+        /* ---------- DESCRIÇÃO ---------- */
+        .description {
+            max-width: 760px;
+            margin: 60px auto 70px auto;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #4a4a4a;
+        }
+
+        .description p {
+            text-align: justify;
+            hyphens: auto;
+            margin-bottom: 18px;
+        }
+
+        .description h3 {
+            text-align: left;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        .description h3::before {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 2px;
+            background-color: #b5bdb8;
+            margin-bottom: 10px;
+        }
+
+        /* ---------- DETALHES ---------- */
+        h3.section-title {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #0f1f1c;
+        }
+
+        .map-detail {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .map-detail img {
+            width: calc(33% - 10px);
+            border-radius: 6px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .map-detail img:hover {
+            transform: scale(1.05);
+        }
+
+        /* ---------- BOTÃO ---------- */
+        .btn {
+            display: block;
+            width: fit-content;
+            margin: 70px auto 0 auto;
+            padding: 12px 26px;
+            background-color: #6fbf9f;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #57a085;
+        }
+
+        /* ---------- RESPONSIVO ---------- */
+        @media (max-width: 900px) {
+            .map-detail img { width: calc(50% - 10px); }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .map-wrapper { width: 100%; margin-left: 0; }
+            .map-detail img { width: 100%; }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="title-section">
+        <h1>Análise de Dados SAR e Óptico</h1>
+        <p class="subtitle">
+            Comparativo entre imagens Sentinel-2 (Óptico) e Sentinel-1 (Radar de Abertura Sintética). 
+            O uso de SAR permite a observação da superfície terrestre independente da cobertura de nuvens, 
+            sendo muito útil para monitoramentos periódicos.
+        </p>
+    </div>
+
+    <div class="map-wrapper">
+        <div class="juxtapose" data-startingposition="50%" data-showlabels="true" data-showcredits="true" data-animate="true">
+            <img src="assets/images/maps/projeto-sar/imagem_optica.png" 
+                 data-label="Sentinel-2 (True Color)" 
+                 data-credit="ESA / Google Earth Engine" />
+            
+            <img src="assets/images/maps/projeto-sar/imagem_sar_tratada.png" 
+                 data-label="Sentinel-1 (SAR VV+VH)" 
+                 data-credit="Processamento: [Seu Nome]" />
+        </div>
+    </div>
+
+    <div class="description">
+        <p>
+            Neste projeto, utilizei o <strong>Google Earth Engine (GEE)</strong> para processar dados de radar (SAR) 
+            do satélite Sentinel-1. Diferente dos sensores ópticos, o radar emite sua própria fonte de energia em 
+            micro-ondas, o que permite "atravessar" a atmosfera e obter dados mesmo em dias chuvosos ou com fumaça.
+        </p>
+
+        <p>
+            O código gerado no GEE aplicou filtros de redução de ruído (Speckle Filter) e correção geométrica, 
+            transformando o sinal de retroespalhamento bruto em uma imagem interpretável para análise de uso e cobertura da terra.
+        </p>
+
+        <h3>Especificações técnicas</h3>
+        <p>
+            As imagens SAR foram processadas utilizando a banda VV (polarização vertical-vertical), que é 
+            particularmente sensível à rugosidade da superfície e à presença de água. No GEE, apliquei uma 
+            conversão para Decibéis (dB) para normalizar os dados e melhorar o contraste visual.
+        </p>
+    </div>
+
+    <h3 class="section-title">Análise de Detalhes</h3>
+    <div class="map-detail">
+        <img src="assets/images/maps/projeto-sar/detalhe1.png" alt="Zoom na área urbana">
+        <img src="assets/images/maps/projeto-sar/detalhe2.png" alt="Zoom na área agrícola">
+        <img src="assets/images/maps/projeto-sar/detalhe3.png" alt="Zoom em corpos d'água">
+    </div>
+
+    <a href="index.html" class="btn">Voltar para o Portfólio</a>
+
+</div>
+
+<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+
+</body>
+</html>
