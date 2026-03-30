@@ -35,6 +35,19 @@
             margin: auto;
         }
 
+        /* PADRONIZAÇÃO DE TODOS OS TÍTULOS (H2) */
+        h2 {
+            font-size: 2.2rem; /* Tamanho padronizado */
+            color: var(--teal-dark); /* Cor padronizada */
+            border-top: 2px solid var(--accent-olive); /* A linhazinha verde */
+            padding-top: 15px;
+            margin-top: 0;
+            margin-bottom: 40px;
+            display: inline-block; /* Faz a linha ter o tamanho do texto */
+            text-transform: none; /* Mantém como digitado */
+            font-weight: 400;
+        }
+
         /* ---------- NAVEGAÇÃO ---------- */
         nav {
             background: var(--white);
@@ -58,36 +71,24 @@
             padding: 0;
         }
 
-        nav li {
-            margin-left: 30px;
-        }
+        nav li { margin-left: 30px; }
 
         nav a {
             text-decoration: none;
             color: var(--teal-dark);
             font-weight: 400;
             font-size: 0.95rem;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--accent-olive);
         }
 
         .language-switch {
             margin-left: 40px;
             font-size: 0.85rem;
-            color: #ccc;
         }
 
-        .language-switch a {
-            color: #888;
-            font-weight: 300;
-        }
+        .language-switch a { color: #888; text-decoration: none; }
 
         /* ---------- HERO (TOPO) ---------- */
         header {
-            /* Certifique-se de que o caminho da imagem abaixo esteja correto no seu GitHub */
             background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
                               url('assets/images/maps/nasa/iss064e014990~medium.jpg');
             background-size: cover;
@@ -107,38 +108,14 @@
             text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
 
-        header p {
-            font-size: 1.2rem;
-            font-weight: 300;
-            margin: 15px 0 25px;
-            letter-spacing: 1px;
-        }
-
         .social-links a {
             color: var(--white);
             font-size: 1.6rem;
             margin: 0 12px;
-            transition: 0.3s;
-        }
-
-        .social-links a:hover {
-            color: var(--accent-olive);
         }
 
         /* ---------- SEÇÃO ABOUT ---------- */
-        .section-about {
-            padding: 80px 0;
-            background: var(--white);
-        }
-
-        .section-about h2 {
-            font-size: 2rem;
-            color: var(--teal-dark);
-            margin-bottom: 40px;
-            border-top: 2px solid var(--accent-olive);
-            display: inline-block;
-            padding-top: 10px;
-        }
+        .section-about { padding: 80px 0; background: var(--white); }
 
         .about-grid {
             display: flex;
@@ -159,22 +136,19 @@
             margin-bottom: 20px;
         }
 
-        /* ---------- PROJETOS (CARDS ESCUROS) ---------- */
+        /* ---------- PROJETOS ---------- */
         .section-projects {
             padding: 80px 0;
             background: var(--bg-light);
             text-align: center;
         }
 
-        .section-projects h2 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-        }
-
         .subtitle {
             color: var(--text-muted);
+            margin-top: -30px;
             margin-bottom: 50px;
             font-size: 0.95rem;
+            display: block;
         }
 
         .projects-grid {
@@ -188,36 +162,15 @@
             border-radius: 12px;
             overflow: hidden;
             text-align: left;
-            transition: transform 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
         }
 
         .project-card img {
             width: 100%;
             height: 220px;
             object-fit: cover;
-            opacity: 0.9;
         }
 
-        .project-card-content {
-            padding: 20px;
-            color: var(--white);
-        }
-
-        .project-card h3 {
-            font-size: 1.1rem;
-            margin: 0 0 10px;
-            font-weight: 600;
-        }
-
-        .project-card p {
-            font-size: 0.85rem;
-            color: #bbb;
-            margin-bottom: 20px;
-        }
+        .project-card-content { padding: 20px; color: var(--white); }
 
         .btn-view {
             display: inline-block;
@@ -228,29 +181,20 @@
             border-radius: 5px;
             font-size: 0.8rem;
             text-transform: uppercase;
-            transition: 0.3s;
         }
 
-        .btn-view:hover {
-            background: var(--white);
-            color: #000;
-        }
-
-        /* ---------- SKILLS (CARDS BRANCOS) ---------- */
+        /* ---------- SKILLS ---------- */
         .section-skills {
             padding: 80px 0;
             background: var(--white);
-        }
-
-        .section-skills h2 {
             text-align: center;
-            margin-bottom: 50px;
         }
 
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
+            text-align: left;
         }
 
         .skill-card {
@@ -261,50 +205,30 @@
             border-top: 5px solid var(--accent-olive);
         }
 
-        .skill-card h3 {
-            color: var(--teal-dark);
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-        }
+        .skill-card h3 { color: var(--teal-dark); margin-bottom: 20px; }
 
-        .skill-card ul {
-            list-style: none;
-            padding: 0;
-        }
+        .skill-card ul { list-style: none; padding: 0; }
 
-        .skill-card li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            font-size: 0.95rem;
-        }
+        .skill-card li { margin-bottom: 10px; font-size: 0.95rem; }
 
         .skill-card li::before {
             content: "•";
             color: var(--accent-olive);
-            font-weight: bold;
             margin-right: 10px;
         }
 
-        /* ---------- CONTACT (FUNDO OLIVA) ---------- */
-        .section-contact {
-            text-align: center;
-        }
+        /* ---------- CONTACT ---------- */
+        .section-contact { text-align: center; }
 
         .contact-header {
             background: var(--accent-olive);
             padding: 60px 0;
+            margin-bottom: 40px;
         }
 
         .contact-header h2 {
-            font-size: 2.5rem;
-            margin: 0;
-            font-weight: 400;
-        }
-
-        .contact-content {
-            padding: 60px 0;
-            background: var(--white);
+            border-top: 2px solid var(--teal-dark); /* Linha escura para contrastar no fundo verde */
+            padding-top: 10px;
         }
 
         .contact-links {
@@ -312,19 +236,16 @@
             justify-content: center;
             gap: 40px;
             flex-wrap: wrap;
+            padding-bottom: 60px;
         }
 
         .contact-links a {
             text-decoration: none;
             color: var(--teal-dark);
             font-weight: 600;
-            font-size: 1.1rem;
         }
 
-        .contact-links i {
-            margin-right: 8px;
-            color: var(--accent-olive);
-        }
+        .contact-links i { margin-right: 8px; color: var(--accent-olive); }
 
         /* ---------- FOOTER ---------- */
         footer {
@@ -332,16 +253,12 @@
             color: var(--white);
             text-align: center;
             padding: 40px 0;
-            font-size: 0.9rem;
         }
 
-        /* ---------- RESPONSIVIDADE ---------- */
         @media (max-width: 768px) {
             header h1 { font-size: 2.5rem; }
             .about-grid { flex-direction: column; text-align: center; }
-            nav .container { justify-content: center; }
-            nav ul { display: none; } /* Simplificação para mobile */
-            .language-switch { margin-left: 0; }
+            nav ul { display: none; }
         }
     </style>
 </head>
@@ -389,14 +306,14 @@
     <section id="projects" class="section-projects">
         <div class="container">
             <h2>GIS Projects</h2>
-            <p class="subtitle">A portfolio showcases your work, skills, and achievements to potential clients and employers.</p>
+            <span class="subtitle">A portfolio showcases your work, skills, and achievements to potential clients and employers.</span>
             
             <div class="projects-grid">
                 <div class="project-card">
                     <img src="assets/images/maps/SAR_detection/Sentinel X.png" alt="SAR">
                     <div class="project-card-content">
                         <h3>SAR Monitoring: Cloud-Free Surface Analysis</h3>
-                        <p>Ut enim ad minim veniam</p>
+                        <p>Comparative analysis between Sentinel-1 radar and Sentinel-2 optical data.</p>
                         <a href="SAR_detection.html" class="btn-view">View Project</a>
                     </div>
                 </div>
@@ -405,7 +322,7 @@
                     <img src="assets/images/maps/unidades-fitogeograficas/MapaFito_1000px.png" alt="Phyto">
                     <div class="project-card-content">
                         <h3>Phytogeographic Units of Paraná</h3>
-                        <p>Ut enim ad minim veniam</p>
+                        <p>Distribution of Vegetation Formations in Relation to Topography.</p>
                         <a href="unidades-fitogeograficas-pr.html" class="btn-view">View Project</a>
                     </div>
                 </div>
@@ -414,7 +331,7 @@
                     <img src="assets/images/maps/serra-do-mar/Mapa_Altitude Serra_do_Mar_1000px.png" alt="Serra do Mar">
                     <div class="project-card-content">
                         <h3>Mountain Complex of the Paraná Serra do Mar</h3>
-                        <p>Ut enim ad minim veniam</p>
+                        <p>Cartographic representation of regional topographic patterns.</p>
                         <a href="serra-do-mar.html" class="btn-view">View Project</a>
                     </div>
                 </div>
@@ -423,7 +340,7 @@
                     <img src="assets/images/maps/active-volcanoes-south-america/active-volcanoes-south-america.gitkeep_1500px.png" alt="Volcanoes">
                     <div class="project-card-content">
                         <h3>Most Active Volcanoes in South America</h3>
-                        <p>Ut enim ad minim veniam</p>
+                        <p>Thematic cartographic representation of active volcanic systems.</p>
                         <a href="active-volcanoes-south-america.html" class="btn-view">View Project</a>
                     </div>
                 </div>
@@ -472,14 +389,12 @@
                 <h2>Contact</h2>
             </div>
         </div>
-        <div class="contact-content">
-            <div class="container">
-                <div class="contact-links">
-                    <a href="mailto:iolandabeatrizk@outlook.com"><i class="fas fa-envelope"></i>Email</a>
-                    <a href="https://wa.me/5541998971030" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
-                    <a href="https://www.linkedin.com/in/iolanda-beatriz-k-a9843110b/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
-                    <a href="https://github.com/iolandabeatrizk" target="_blank"><i class="fab fa-github"></i>GitHub</a>
-                </div>
+        <div class="container">
+            <div class="contact-links">
+                <a href="mailto:iolandabeatrizk@outlook.com"><i class="fas fa-envelope"></i>Email</a>
+                <a href="https://wa.me/5541998971030" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+                <a href="https://www.linkedin.com/in/iolanda-beatriz-k-a9843110b/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                <a href="https://github.com/iolandabeatrizk" target="_blank"><i class="fab fa-github"></i>GitHub</a>
             </div>
         </div>
     </section>
