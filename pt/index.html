@@ -1,431 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iolanda Beatriz Kalinoski | GIS Portfolio</title>
 
-<title>Iolanda Beatriz | GIS Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-<!-- FONTS -->
- <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,600;1,100&display=swap" rel="stylesheet">
+    <style>
+        /* ---------- VARIÁVEIS E GLOBAL ---------- */
+        :root {
+            --teal-dark: #1f3d3a;
+            --teal-light: #7fd1cc;
+            --accent-olive: #a3b18a;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+            --text-main: #2b2b2b;
+            --text-muted: #666;
+        }
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-main);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
 
-<style>
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
 
-/* ---------- GLOBAL ---------- */
+        /* PADRONIZAÇÃO DE TODOS OS TÍTULOS (H2) */
+        h2 {
+            font-size: 2.2rem; /* Tamanho padronizado */
+            color: var(--teal-dark); /* Cor padronizada */
+            border-top: 2px solid var(--accent-olive); /* A linhazinha verde */
+            padding-top: 15px;
+            margin-top: 0;
+            margin-bottom: 40px;
+            display: inline-block; /* Faz a linha ter o tamanho do texto */
+            text-transform: none; /* Mantém como digitado */
+            font-weight: 400;
+        }
 
-body{
-    font-family:'Inter', sans-serif;
-    font-weight:300;
-    color:#2b2b2b;
-    scroll-behavior:smooth;
-}
+        /* ---------- NAVEGAÇÃO ---------- */
+        nav {
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px 0;
+        }
 
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-}
+        nav .container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
 
-h1, h2, h3{
-    font-family:'Inter', sans-serif;
-    font-weight:400;
-    letter-spacing:0.5px;
-}
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
 
-/* ---------- HEADER ---------- */
+        nav li { margin-left: 30px; }
 
-header{
-    background:#1f3d3a;
-    color:white;
-    text-align:center;
-    padding:80px 20px;
-}
+        nav a {
+            text-decoration: none;
+            color: var(--teal-dark);
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
 
-header h1{
-    font-size:2.6em;
-    margin:0;
-}
+        .language-switch {
+            margin-left: 40px;
+            font-size: 0.85rem;
+        }
 
-.social-links a{
-    color:white;
-    margin:0 12px;
-    font-size:1.4em;
-    transition:0.3s;
-}
+        .language-switch a { color: #888; text-decoration: none; }
 
-.social-links a:hover{
-    color:#7fd1cc;
-}
+        /* ---------- HERO (TOPO) ---------- */
+        header {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                              url('assets/images/maps/nasa/iss064e014990~medium.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
 
-/* ---------- NAV ---------- */
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 400;
+            margin: 0;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
 
-nav{
-    background:white;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 2px 6px rgba(0,0,0,0.08);
-}
+        .social-links a {
+            color: var(--white);
+            font-size: 1.6rem;
+            margin: 0 12px;
+        }
 
-nav ul{
-    list-style:none;
-    display:flex;
-    justify-content:center;
-    margin:0;
-    padding:15px;
-}
+        /* ---------- SEÇÃO ABOUT ---------- */
+        .section-about { padding: 80px 0; background: var(--white); }
 
-nav li{
-    margin:0 20px;
-}
+        .about-grid {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
 
-nav a{
-    text-decoration:none;
-    color:#1f3d3a;
-    font-weight:700;
-}
+        .profile-photo {
+            width: 280px;
+            border-radius: 15px;
+            box-shadow: 10px 10px 0px var(--accent-olive);
+        }
 
-/* ---------- SECTIONS ---------- */
+        .about-text p {
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
 
-.section{
-    padding:70px 0;
-}
+        /* ---------- PROJETOS ---------- */
+        .section-projects {
+            padding: 80px 0;
+            background: var(--bg-light);
+            text-align: center;
+        }
 
-.section h2{
-    text-align:center;
-    color:#1f3d3a;
-    margin-bottom:40px;
-}
+        .subtitle {
+            color: var(--text-muted);
+            margin-top: -30px;
+            margin-bottom: 50px;
+            font-size: 0.95rem;
+            display: block;
+        }
 
-/* ---------- ABOUT ---------- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
 
-.about-content{
-    display:flex;
-    gap:50px;
-    align-items:center;
-    justify-content:center;
-}
+        .project-card {
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: left;
+        }
 
-.profile-photo{
-    width:240px;
-    border-radius:12px;
-}
+        .project-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
 
-..about-text,
-.description{
-    font-style:italic;
-    font-weight:100;
-    color:#4a4a4a;
-}
+        .project-card-content { padding: 20px; color: var(--white); }
 
-@media (max-width:800px){
-    .about-content{
-        flex-direction:column;
-        text-align:center;
-    }
-}
+        .btn-view {
+            display: inline-block;
+            border: 1px solid var(--white);
+            color: var(--white);
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
 
-/* ---------- PROJECTS ---------- */
+        /* ---------- SKILLS ---------- */
+        .section-skills {
+            padding: 80px 0;
+            background: var(--white);
+            text-align: center;
+        }
 
-.projects-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            text-align: left;
+        }
 
-.project-card{
-    background:white;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 6px 18px rgba(0,0,0,0.08);
-    transition:0.3s;
-}
+        .skill-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--accent-olive);
+        }
 
-.project-card:hover{
-    transform:translateY(-6px);
-}
+        .skill-card h3 { color: var(--teal-dark); margin-bottom: 20px; }
 
-.project-card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-}
+        .skill-card ul { list-style: none; padding: 0; }
 
-.project-card-content{
-    padding:20px;
-}
+        .skill-card li { margin-bottom: 10px; font-size: 0.95rem; }
 
-.btn{
-    display:inline-block;
-    margin-top:10px;
-    padding:10px 18px;
-    background:#2a6f6b;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
-    transition:0.3s;
-}
+        .skill-card li::before {
+            content: "•";
+            color: var(--accent-olive);
+            margin-right: 10px;
+        }
 
-.btn:hover{
-    background:#1f3d3a;
-}
+        /* ---------- CONTACT ---------- */
+        .section-contact { text-align: center; }
 
-/* ---------- SKILLS ---------- */
+        .contact-header {
+            background: var(--accent-olive);
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
 
-.skills-table{
-    display:flex;
-    flex-wrap:wrap;
-    gap:30px;
-    justify-content:center;
-}
+        .contact-header h2 {
+            border-top: 2px solid var(--teal-dark); /* Linha escura para contrastar no fundo verde */
+            padding-top: 10px;
+        }
 
-.skill-column{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    width:260px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.06);
-}
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding-bottom: 60px;
+        }
 
-/* ---------- CONTACT ---------- */
+        .contact-links a {
+            text-decoration: none;
+            color: var(--teal-dark);
+            font-weight: 600;
+        }
 
-.contact{
-    text-align:center;
-}
+        .contact-links i { margin-right: 8px; color: var(--accent-olive); }
 
-.contact a{
-    color:#1f3d3a;
-    text-decoration:none;
-    font-weight:600;
-}
+        /* ---------- FOOTER ---------- */
+        footer {
+            background: var(--teal-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 0;
+        }
 
-.contact i{
-    margin-right:8px;
-}
-
-/* ---------- FOOTER ---------- */
-
-footer{
-    background:#1f3d3a;
-    color:white;
-    text-align:center;
-    padding:30px;
-}
-
-
- /* ---------- LANGUAGE SWITCH ---------- */
-
-.language-switch{
-    position:absolute;
-    top:20px;
-    right:40px;
-    font-size:14px;
-    font-weight:400;
-    z-index:2000;
-}
-
-.language-switch a{
-    text-decoration:none;
-    color:#ffffff;
-    margin:0 5px;
-}
-
-.language-switch a:hover{
-    opacity:0.7;
-}
- 
-</style>
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            .about-grid { flex-direction: column; text-align: center; }
+            nav ul { display: none; }
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="language-switch">
-  <a href="/">EN</a> |
-  <a href="/pt/">PT</a>
-</div>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">GIS Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="language-switch">
+                <a href="/">EN</a> | <a href="/pt/">PT</a>
+            </div>
+        </div>
+    </nav>
 
-<!-- HEADER -->
-<header>
-<div class="container">
-<h1>Iolanda Beatriz</h1>
-<p>Engenheira Florestal | Analista GIS | Spatial Data & Environmental Analysis</p>
+    <header>
+        <div class="container">
+            <h1>Iolanda Beatriz Kalinoski</h1>
+            <p>Forest Engineer | GIS Analyst | Spatial Data & Environmental Analysis</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/iolanda-beatriz-k-a9843110b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/iolandabeatrizk" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </header>
 
-<div class="social-links">
-<a href="https://www.linkedin.com/in/iolanda-beatriz-k-a9843110b/" target="_blank">
-<i class="fab fa-linkedin"></i></a>
+    <section id="about" class="section-about">
+        <div class="container">
+            <h2>About me</h2>
+            <div class="about-grid">
+                <img src="assets/images/maps/about-me/Me.jpg" class="profile-photo" alt="Iolanda Beatriz">
+                <div class="about-text">
+                    <p>Forest Engineer specialized in GIS and spatial analysis applied to environmental monitoring, land-use planning, and forest management.</p>
+                    <p>My work focuses on transforming spatial data into clear environmental insights that support territorial decision-making and sustainable land management.</p>
+                    <p>Experienced with ArcGIS Pro, ArcGIS Online, QGIS, spatial analysis, and environmental datasets, currently expanding skills in Python and data science.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<a href="https://github.com/iolandabeatrizk" target="_blank">
-<i class="fab fa-github"></i></a>
-</div>
-</div>
-</header>
+    <section id="projects" class="section-projects">
+        <div class="container">
+            <h2>GIS Projects</h2>
+            <span class="subtitle">Explore my latest work in GIS, remote sensing, and environmental monitoring.</span>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="assets/images/maps/SAR_detection/Sentinel X.png" alt="SAR">
+                    <div class="project-card-content">
+                        <h3>SAR Monitoramento: Cloud-Free Surface Analysis</h3>
+                        <p> Análise comparativa entre Sentinel-1 (SAR) e Sentinel-2 (dados ópticos).</p>
+                        <a href="SAR_detection.html" class="btn-view">View Project</a>
+                    </div>
+                </div>
 
-<!-- NAV -->
-<nav>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#projects">GIS Projects</a></li>
-<li><a href="resume.html">Resume</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
+                <div class="project-card">
+                    <img src="assets/images/maps/unidades-fitogeograficas/MapaFito_1000px.png" alt="Phyto">
+                    <div class="project-card-content">
+                        <h3>Unidades Fitogeográficas do Paraná</h3>
+                        <p>Distribuição das unidades fitogeográficas paranaenses em relação à altitude</p>
+                        <a href="unidades-fitogeograficas-pr.html" class="btn-view">View Project</a>
+                    </div>
+                </div>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-<div class="container">
+                <div class="project-card">
+                    <img src="assets/images/maps/serra-do-mar/Mapa_Altitude Serra_do_Mar_1000px.png" alt="Serra do Mar">
+                    <div class="project-card-content">
+                        <h3>Complexo de Montanhas da Serra do Mar Paranaense</h3>
+                        <p>Destaque das maiores altitudes e da configuração do relevo na Serra do Mar paranaense.</p>
+                        <a href="serra-do-mar.html" class="btn-view">View Project</a>
+                    </div>
+                </div>
 
-<h2>About Me</h2>
+                <div class="project-card">
+                    <img src="assets/images/maps/active-volcanoes-south-america/active-volcanoes-south-america.gitkeep_1500px.png" alt="Volcanoes">
+                    <div class="project-card-content">
+                        <h3>Os vulcões mais ativos da América do Sul</h3>
+                        <p>Representação cartográfica dos principais vulcões ativos da América do Sul e sua distribuição ao longo da Cordilheira dos Andes.</p>
+                        <a href="active-volcanoes-south-america.html" class="btn-view">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="about-content">
+    <section id="skills" class="section-skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>GIS Tools</h3>
+                    <ul>
+                        <li>ArcGIS Pro</li>
+                        <li>ArcGIS Online</li>
+                        <li>QGIS</li>
+                        <li>Google Earth</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Data & Visualization</h3>
+                    <ul>
+                        <li>Python (learning)</li>
+                        <li>SQL (learning)</li>
+                        <li>Google Earth Engine</li>
+                        <li>Tableau / Power BI</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Environmental Apps</h3>
+                    <ul>
+                        <li>Land-use Analysis</li>
+                        <li>Forest Monitoring</li>
+                        <li>Environmental Mapping</li>
+                        <li>Cartographic Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <img src="/assets/images/maps/about-me/Me.jpg"
-       class="profile-photo"
-       alt="Profile Photo">
+    <section id="contact" class="section-contact">
+        <div class="contact-header">
+            <div class="container">
+                <h2>Contact</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="contact-links">
+                <a href="mailto:iolandabeatrizk@outlook.com"><i class="fas fa-envelope"></i>Email</a>
+                <a href="https://wa.me/5541998971030" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+                <a href="https://www.linkedin.com/in/iolanda-beatriz-k-a9843110b/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                <a href="https://github.com/iolandabeatrizk" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+            </div>
+        </div>
+    </section>
 
-  <div class="about-text">
-    <p>
-    Forest Engineer specialized in GIS and spatial analysis applied to
-    environmental monitoring, land-use planning, and forest management.
-    </p>
+    <footer>
+        <div class="container">
+            <p>© 2026 Iolanda Beatriz Kalinoski</p>
+        </div>
+    </footer>
 
-    <p>
-    My work focuses on transforming spatial data into clear environmental
-    insights that support territorial decision-making and sustainable
-    land management.
-    </p>
-
-    <p>
-    Experienced with ArcGIS Pro, ArcGIS Online, QGIS, spatial analysis,
-    and environmental datasets, currently expanding skills in Python
-    and data science.
-    </p>
-  </div>
-
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="section">
-<div class="container">
-
-<h2>GIS Projects</h2>
-
-<div class="projects-grid">
-
-<div class="project-card">
-<img src="/assets/images/maps/unidades-fitogeograficas/MapaFito_1000px.png">
-<div class="project-card-content">
-<h3>Unidades Fitogeográficas do Paraná</h3>
-<p>Distribuição das unidades fitogeográficas paranaenses em relação à altitude..</p>
-<a href="unidades-fitogeograficas-pr.html" class="btn">View Project</a>
-</div>
-</div>
-
-<div class="project-card">
-<img src="/assets/images/maps/serra-do-mar/Mapa_Altitude Serra_do_Mar_1000px.png">
-<div class="project-card-content">
-<h3>Complexo de Montanhas da Serra do Mar Paranaense</h3>
-<p>Destaque das maiores altitudes e da configuração do relevo na Serra do Mar paranaense.</p>
-<a href="serra-do-mar.html" class="btn">View Project</a>
-</div>
-</div>
-
-<div class="project-card">
-<img src="/assets/images/maps/active-volcanoes-south-america/active-volcanoes-south-america.gitkeep_1500px.png">
-<div class="project-card-content">
-<h3>Os vulcões mais ativos da América do Sul</h3>
-<p>Representação cartográfica dos principais vulcões ativos da América do Sul e sua distribuição ao longo da Cordilheira dos Andes.</p>
-<a href="active-volcanoes-south-america.html" class="btn">View Project</a>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section">
-<div class="container">
-
-<h2>Technical Skills</h2>
-
-<div class="skills-table">
-
-<div class="skill-column">
-<h3>GIS Tools</h3>
-<ul>
-<li>ArcGIS Pro</li>
-<li>ArcGIS Online</li>
-<li>QGIS</li>
-<li>Spatial Analysis</li>
-</ul>
-</div>
-
-<div class="skill-column">
-<h3>Data & Programming</h3>
-<ul>
-<li>Python (learning)</li>
-<li>SQL (learning)</li>
-<li>Data Analysis</li>
-<li>Geospatial Processing</li>
-</ul>
-</div>
-
-<div class="skill-column">
-<h3>Environmental Applications</h3>
-<ul>
-<li>Land-use Analysis</li>
-<li>Forest Monitoring</li>
-<li>Environmental Mapping</li>
-<li>Cartographic Design</li>
-</ul>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section">
-<div class="container contact">
-
-<h2>Contact</h2>
-
-<p>
-<a href="mailto:iolandabeatrizk@outlook.com">
-<i class="fas fa-envelope"></i>Email
-</a>
-<br><br>
-
-<a href="https://wa.me/5541998971030" target="_blank">
-<i class="fab fa-whatsapp"></i>WhatsApp
-</a>
-<br><br>
-
-<a href="https://www.linkedin.com/in/iolanda-beatriz-k-a9843110b/" target="_blank">
-<i class="fab fa-linkedin"></i>LinkedIn
-</a>
-<br><br>
-
-<a href="https://github.com/iolandabeatrizk" target="_blank">
-<i class="fab fa-github"></i>GitHub
-</a>
-</p>
-
-</div>
-</section>
-
-<footer>
-<p>© 2026 Iolanda Beatriz</p>
-</footer>
-
-</body>
-</html>
 
